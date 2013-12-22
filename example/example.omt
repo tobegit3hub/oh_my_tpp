@@ -1,0 +1,17 @@
+
+page "oh my tpp" do
+  text "the dsl for ppt"
+  link "https://github.com/tobegit3hub/oh_my_tpp.git"
+  image "http://chendihao.cn/omt.jpg"
+  audio "http://chendihao.cn/omt_speech.mp3"
+  video "http://chendihao.cn/omt_operation.mp4"
+end
+
+page "about me" do
+  text "I'm tobe"
+  link "http://chendihao.cn"
+  image "http://chendihao.cn/tobe.jpg"
+  audio "http://chendihao.cn/speech.mp3"
+  video "http://chendihao.cn/show.mp4"
+end
+
