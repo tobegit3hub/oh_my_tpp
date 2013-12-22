@@ -5,21 +5,38 @@ class Page
   attr_accessor :contents
 
   def initialize
-    @contents = {}
+    @contents = []
   end
   
   def title(title)
-    @contents[title] = :title
+    @contents << {:title => title}
   end
 
   def text(content)
-    @contents[content] = :text
+    @contents << {:text => content}
+  end
+
+  def link(url)
+    @contents << {:link => url}
+  end
+
+  def image(url)
+    @contents << {:image => url}
+  end
+
+  def audio(url)
+    @contents << {:audio => url}
+  end
+
+  def video(url)
+    @contents << {:video => url}
   end
 
 end
 
 
 class OhMyTpp
+  attr_accessor :pages
 
   def initialize
     @pages = []
@@ -30,7 +47,6 @@ class OhMyTpp
   end
   
   def page(title="title")
-    puts "title = #{title}"
     page = Page.new
     page.title title
     @pages << page
@@ -38,23 +54,23 @@ class OhMyTpp
   end
 
   def text(content)
-    puts "content = #{content}"
+    pages[-1].text content
   end
 
   def link(url)
-    puts "link = #{url}"
+    pages[-1].link url
   end
 
   def image(url)
-    puts "image = #{url}"
+    pages[-1].image url
   end
 
   def audio(url)
-    puts "audio = #{url}"
+    pages[-1].audio url
   end
 
   def video(url)
-    puts "audio = #{url}"
+    pages[-1].video url
   end
 
 end 
