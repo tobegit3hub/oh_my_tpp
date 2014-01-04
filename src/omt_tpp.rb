@@ -27,7 +27,7 @@ class OhMyTppTpp < OhMyTpp
         file.puts "--title #{page.title}"
         page.contents.each do |kv|
           puts "[omt tpp] write #{kv.values[0]}"
-          file.puts kv.values[0]
+          file.puts kv.keys[0].to_s << " " << kv.values[0]
         end
         file.puts ""
       end
