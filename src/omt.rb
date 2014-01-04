@@ -6,7 +6,7 @@ class Page
   attr_accessor :title, :contents
 
   def initialize(title)
-    @title = "titlt"
+    @title = title
     @contents = []
   end
 
