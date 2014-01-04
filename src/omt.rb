@@ -1,15 +1,13 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 
+# the page containing all the contents
 class Page
-  attr_accessor :contents
+  attr_accessor :title, :contents
 
-  def initialize
+  def initialize(title)
+    @title = "titlt"
     @contents = []
-  end
-  
-  def title(title)
-    @contents << {:title => title}
   end
 
   def text(content)
@@ -32,53 +30,43 @@ class Page
     @contents << {:video => url}
   end
 
+  def to_s
+    @contents
+  end
+  
 end
 
-
+# basic class to load .omt file
 class OhMyTpp
-  attr_accessor :pages
+  attr_accessor :pages, :file_name
 
   def initialize
     @pages = []
   end
 
   def load(file_name)
+    puts "[omt] load the file #{file_name}"
+    @file_name = file_name
     self.instance_eval(File.read(file_name))
   end
-  
-  def page(title="title")
-    page = Page.new
-    page.title title
+
+  def page(title, &block)
+    puts "[omt] load the page #{title}"
+    page = Page.new(title)
+    page.instance_eval(&block)
     @pages << page
-    yield if block_given?
   end
 
-  def text(content)
-    pages[-1].text content
+  def to_s
+    @pages
   end
-
-  def link(url)
-    pages[-1].link url
-  end
-
-  def image(url)
-    pages[-1].image url
-  end
-
-  def audio(url)
-    pages[-1].audio url
-  end
-
-  def video(url)
-    pages[-1].video url
-  end
-
+  
 end 
 
 
 if __FILE__ == $0
-  omt_file_name = ARGV.first
+  file_name = ARGV.first
   omt = OhMyTpp.new
-  omt.load omt_file_name
+  omt.load file_name if file_name.end_with? ".omt"
 end
 
