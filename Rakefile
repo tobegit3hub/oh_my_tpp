@@ -1,4 +1,8 @@
 
+task :default do
+  :test
+end
+
 desc "run the"
 task :demo do
   puts "Run omt demo"
