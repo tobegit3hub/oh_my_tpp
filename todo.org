@@ -1,8 +1,0 @@
-
-* display
-** convert omt file to tpp file to run
-** compile omt to html file
-** write my ncurse program for omt
-
-* setup
-** write Makefile
