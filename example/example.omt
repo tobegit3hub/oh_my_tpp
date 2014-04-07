@@ -1,17 +1,20 @@
 
 page "oh my tpp" do
-  text "the dsl for ppt"
+  text "The dsl for ppt, inspired by tpp."
   link "https://github.com/tobegit3hub/oh_my_tpp.git"
-  image "http://chendihao.cn/omt.jpg"
-  audio "http://chendihao.cn/omt_speech.mp3"
-  video "http://chendihao.cn/omt_operation.mp4"
+end
+
+page "syntax" do
+  text "the simple text like oh_my_tpp"
+  link "the linke like https://travis-ci.org"
+  image "the image in https://images.google.com"
+  audio "the audio in https://fb.com"
+  video "the video in https://www.youtube.com"
 end
 
 page "about me" do
-  text "I'm tobe"
+  text "Tobe, the developer"
   link "http://chendihao.cn"
-  image "http://chendihao.cn/tobe.jpg"
-  audio "http://chendihao.cn/speech.mp3"
-  video "http://chendihao.cn/show.mp4"
+  link "https://github.com/tobegit3hub/"
 end
 

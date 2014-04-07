@@ -1,0 +1,13 @@
+
+page "Introduction" do
+  
+  text "I'm matz"
+
+  text "I'm using Ruby"
+
+  link "http://chendihao.cn"
+
+  image "http://chendihao.cn/abc.jpg"
+
+end
+
