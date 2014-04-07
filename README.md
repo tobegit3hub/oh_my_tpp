@@ -1,9 +1,7 @@
-# Oh My Tpp
-
-[![TravisCI status](https://secure.travis-ci.org/tobegit3hub/oh_my_tpp.png)](http://travis-ci.org/tobegit3hub/oh_my_tpp)
+# Oh My Tpp [![TravisCI status](https://secure.travis-ci.org/tobegit3hub/oh_my_tpp.png)](http://travis-ci.org/tobegit3hub/oh_my_tpp)
 
 ## Introduction
-Oh_my_tpp is the Ruby DSL(Domain Specified Language) for presentation. It's inpired by [tpp](hhttp://www.ngolde.de/tpp.html) but more than it. You can write the semantic "code" to present your idea and convert into any type of files you want. It's also a tidy demo for you to how to design a inner domain specified language.
+**Oh_my_tpp** is the Ruby DSL(Domain Specified Language) for presentation. It's inpired by [tpp](hhttp://www.ngolde.de/tpp.html) but more than it. You can write the semantic "code" to present your idea and convert into any type of files you want. It's also a tidy demo for you to how to design a inner domain specified language.
 
 ## Example
 You can write your presentation file like example.omt:
